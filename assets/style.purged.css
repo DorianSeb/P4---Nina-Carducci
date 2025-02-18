@@ -49,7 +49,16 @@ header .name {
 	padding-block: 100px;
 	position: relative;
 }
-
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black !important; /* Fond noir */
+    border-radius: 50%; /* Pour les rendre arrondis */
+    padding: 12px; /* Augmente la surface cliquable */
+}
+.visually-hidden {
+    color: black !important; /* Assure un bon contraste */
+    background-color: white !important;
+}
 .picture.left::before {
 	content: ' ';
 	background-color: #E5975F;
@@ -110,7 +119,7 @@ header .name {
 	justify-content: center;
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-	color: #fff;
+	color: black;
 	background-color: #BEB45A;
 	border-radius:0 ;
 }
@@ -201,7 +210,11 @@ header .name {
 	justify-content: space-between;
 	z-index: 1;
 }
-
+.service__price .price {
+	font-size: calc(1.275rem + .3vw);
+	font-weight: 500;
+	margin-bottom: 0;
+}	
 #contact {
 	margin: auto;
 	background-color: #D8D3A8 ;
@@ -271,7 +284,45 @@ input[type="submit"] {
 		width: 100%;
 	}
 }
-
+footer {
+    background-color: white; /* Fond blanc */
+    color: #000; /* Texte noir */
+    padding: 40px 0;
+    text-align: center;
+    font-size: 14px;
+    border-top: 2px solid #ddd; /* Petite séparation */
+}
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+footer nav ul li {
+    display: inline;
+}
+footer nav ul li a {
+    color: #333; /* Texte plus foncé pour la lisibilité */
+    text-decoration: none;
+    font-weight: bold;
+}
+footer nav ul li a:hover {
+    text-decoration: underline;
+}
+footer .social-links img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease-in-out;
+}
+footer .social-links img:hover {
+    transform: scale(1.2); /* Zoom léger au survol */
+}
 @media all and (max-width: 1000px) {
 	#about{
 		flex-direction: column;
@@ -364,5 +415,4 @@ input[type="submit"] {
 	.picture {
 		width: 80%;
 	}
-}
 
